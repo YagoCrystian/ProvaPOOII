@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Leilões</title>
+    <link rel="stylesheet" href="/src/public/style.css">
+ <!-- Link para o arquivo de estilo global -->
+</head>
+<body>
+
+    <h2>Adicionar Usuário</h2>
+
+    <form id="userForm">
+        <label for="userName">Nome:</label>
+        <input type="text" id="userName" name="userName" required>
+
+        <label for="userEmail">Email:</label>
+        <input type="email" id="userEmail" name="userEmail" required>
+
+        <button type="button" onclick="addUser()">Adicionar Usuário</button>
+    </form>
+
+    <h2>Adicionar Leilão</h2>
+
+    <form id="leilaoForm">
+        <label for="leilaoProduto">Produto:</label>
+        <input type="text" id="leilaoProduto" name="leilaoProduto" required>
+
+        <label for="leilaoPreco">Preço:</label>
+        <input type="number" id="leilaoPreco" name="leilaoPreco" required>
+
+        <label for="leilaoDataLimite">Data Limite:</label>
+        <input type="datetime-local" id="leilaoDataLimite" name="leilaoDataLimite" required>
+
+        <button type="button" onclick="addLeilao()">Adicionar Leilão</button>
+    </form>
+
+    <h2>Fazer Lance</h2>
+
+    <form id="lanceForm">
+        <label for="lanceValor">Valor do Lance:</label>
+        <input type="number" id="lanceValor" name="lanceValor" required>
+
+        <!-- Assume que você tem uma lista de leilões existentes para escolher -->
+        <label for="selectLeilao">Escolha um Leilão:</label>
+        <select id="selectLeilao" name="selectLeilao" required>
+            <!-- Adicione as opções dinamicamente usando JavaScript ou insira manualmente -->
+            <option value="1">Leilão 1</option>
+            <option value="2">Leilão 2</option>
+            <!-- ... -->
+        </select>
+
+        <button type="button" onclick="addLance()">Fazer Lance</button>
+    </form>
+
+    <script src="/script.js"></script> <!-- Link para o arquivo de script global -->
+
+</body>
+</html>
